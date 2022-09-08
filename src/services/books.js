@@ -29,5 +29,6 @@ exports.jsonReturn = (keyword = '') => {
   json.total = total;
   json.books = booksSearched;
 
+  if (json.total === 0) return false;
   return json;
 };
