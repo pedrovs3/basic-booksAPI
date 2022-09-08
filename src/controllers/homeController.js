@@ -1,4 +1,4 @@
-const books = require('../functions/books');
+const books = require('../services/books');
 
 exports.index = async (req, res) => {
   const livros = books.jsonReturn(req.params.keyword);
