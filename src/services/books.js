@@ -1,13 +1,13 @@
-const booksJSON = require('../../tests/livros.json');
+const booksJSON = require('../../mock/livros.json');
 
 const { books } = booksJSON;
 
 const findBooks = (keyword = '') => {
   const searchBooks = [];
-  keyword.toLowerCase();
+  const search = keyword.toLowerCase();
 
   books.forEach((book) => {
-    if (book.title.toLowerCase().includes(keyword)) {
+    if (book.title.toLowerCase().includes(search)) {
       const bookFormat = {
         name: book.title,
         description: book.subtitle,
